@@ -1,74 +1,91 @@
-CESAR SCHOOL & NTT DATA
+#  CESAR School & NTTDATA  
+## 📊 Projeto COMPEDATA  
 
-Cadeira: Projetos — Grupo 3 Água e Esgoto
-👨‍🎓 Equipe
+---
 
-Bruno Sottomayor Martin
+##  Integrantes do Grupo  
+| Nome | GitHub |
+|------|--------|
+| **Bruno Sottomayor Martin** | @brunosm26 |
+| **Bruno José Cavalcanti** | @brunodf081 |
+| **Igor Kauã** | @igorrizzin |
+| **Vinicius da Cruz** | — |
+| **Matheus Connolly** | @Connolly-devops |
+| **Gabriel Leal** | — |
 
-Bruno José Cavalcanti
+---
 
-Igor Kauã
+# Introdução ao Projeto
 
-Vinicius da Cruz
+A **Compedata** é uma solução orientada à análise de dados, criada com o objetivo de transformar informações brutas em **insights valiosos para a gestão pública**.  
+Utilizando dados reais de **corte de água**, **consumo** e **localidades**, a solução identifica padrões, recorrências e comportamentos que podem indicar:
 
-Matheus Connolly
+- áreas críticas,  
+- regiões vulneráveis,  
+- tendências preocupantes,  
+- oportunidades de melhoria na operação e fornecimento.
 
-Gabriel Leal
+A partir desses diagnósticos, a prefeitura e órgãos governamentais passam a ter uma visão clara e fundamentada sobre **onde** e **por que** os problemas estão acontecendo. Isso permite:
 
-📊 Projeto COMPEDATA
+- ações preventivas,  
+- otimização de recursos,  
+- priorização de regiões críticas,  
+- comunicação mais eficiente com a população.
 
-A Compedata é uma solução orientada à análise de dados que tem como objetivo transformar informações brutas em insights valiosos para gestão pública. A partir de dados reais de corte de água, 
-consumo e localidades, o projeto identifica padrões, recorrências e comportamentos que podem indicar áreas críticas, tendências preocupantes ou oportunidades de melhoria nos serviços de abastecimento.
+A Compedata nasce, portanto, como uma ponte entre **dados e decisões**, contribuindo para uma gestão pública **mais inteligente, eficiente e orientada por evidências**.
 
-Com essas análises, buscamos entregar à prefeitura e órgãos governamentais uma visão clara e fundamentada sobre onde e por que certos problemas estão acontecendo. A partir disso,
-gestores podem agir de forma mais estratégica — seja planejando ações preventivas, otimizando recursos, priorizando regiões vulneráveis ou melhorando a comunicação com a população.
+---
 
-A Compedata nasce, portanto, como uma ponte entre dados e decisões, contribuindo para uma gestão pública mais eficiente, inteligente e orientada por evidências.
+# 🛠️ Arquitetura da Solução
 
-🏗️ Arquitetura do Pipeline
+A solução segue a arquitetura **Medallion (Bronze → Silver → Gold)**:
 
-A solução segue a estrutura clássica Medallion Architecture:
+### 🥉 Bronze  
+Coleta e armazenamento dos dados brutos (planilhas de corte de água e consumo).
 
-🥉 Bronze
+### 🥈 Silver  
+Padronização, limpeza, enriquecimento e preparação dos dados.
 
-Ingestão das planilhas originais (.csv).
+### 🥇 Gold  
+Criação de tabelas analíticas e indicadores usados em dashboards e relatórios.
 
-Nenhum tratamento aplicado.
+---
 
-🥈 Silver
+# 📊 Dashboards Criados
 
-Limpeza e padronização das colunas.
+Os dashboards foram desenvolvidos no Databricks usando tabelas Gold, com visualizações para:
 
-Conversão de datas.
+- Cortes por bairro  
+- Cortes por mês  
+- Ranking Top 10  
+- Análises por status (efetuado vs pendente)  
+- Comparação por ano  
 
-Criação de atributos derivados (ano, mês, status, etc.).
+Essas visualizações permitem que gestores identifiquem rapidamente **onde estão os maiores problemas** e **qual deve ser a priorização das ações**.
 
-🥇 Gold
+---
 
-Tabelas analíticas para dashboards, incluindo:
+#  Tecnologias Utilizadas
+- Databricks  
+- PySpark  
+- Delta Lake  
+- Plotly  
+- GitHub  
 
-Cortes por bairro
+---
 
-Cortes por mês
+#  Estrutura do Repositório
+aguas_esgoto_ntt/
+├── bronze/
+├── silver/
+├── gold/
+├── notebooks/
+└── README.md
 
-Cortes por ano
+yaml
+Copiar código
 
-Status dos cortes
+---
 
-Ranking Top 10 bairros
 
-📊 Dashboards
-
-Foram geradas visualizações profissionais no Databricks utilizando Plotly, como:
-
-Comparativo anual de cortes efetuados e pendentes
-
-Top 10 bairros com maior número de cortes
-
-Meses com maiores ocorrências por ano
-
-Análises de distribuição e tendências
-
-🎯 Objetivo Final
-
-Fornecer uma visão clara e estruturada sobre o comportamento dos cortes de água ao longo do tempo, identificando padrões, sazonalidade e regiões com maior ocorrência.
+Este projeto foi desenvolvido para a cadeira de **Projetos – CESAR School**, em parceria com a **NTT Data**.
