@@ -70,7 +70,8 @@ Essas visualizações permitem que gestores identifiquem rapidamente **onde est�
 - PySpark  
 - Delta Lake  
 - Plotly  
-- GitHub  
+- GitHub
+- SQL 
 
 ---
 
