@@ -81,10 +81,6 @@ aguas_esgoto_ntt/
 ├── gold/
 ├── notebooks/
 └── README.md
-
-yaml
-Copiar código
-
 ---
 
 
